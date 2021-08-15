@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faceter_crisis_type
+    - node.type.faceter_test
+  module:
+    - options
+id: node.faceter_test.field_faceter_crisis_type
+field_name: field_faceter_crisis_type
+entity_type: node
+bundle: faceter_test
+label: 'Crisis type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

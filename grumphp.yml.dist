@@ -1,0 +1,11 @@
+parameters:
+  tasks.phpcs.ignore_patterns:
+    - vendor/
+    - web/
+  tasks.phpcs.triggered_by:
+    - php
+    - module
+    - inc
+    - theme
+    - install
+    - yml

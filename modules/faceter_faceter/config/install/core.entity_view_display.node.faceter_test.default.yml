@@ -1,0 +1,64 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.faceter_test.body
+    - field.field.node.faceter_test.field_faceter_crisis_date
+    - field.field.node.faceter_test.field_faceter_crisis_type
+    - field.field.node.faceter_test.field_faceter_has_crisis
+    - node.type.faceter_test
+  module:
+    - datetime
+    - options
+    - text
+    - user
+id: node.faceter_test.default
+targetEntityType: node
+bundle: faceter_test
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_faceter_crisis_date:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_faceter_crisis_type:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_faceter_has_crisis:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  oe_content_content_owner: true
+  oe_content_legacy_link: true
+  oe_content_navigation_title: true
+  oe_content_short_title: true
+  search_api_excerpt: true

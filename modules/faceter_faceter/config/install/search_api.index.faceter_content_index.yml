@@ -1,0 +1,102 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - search_api
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_faceter_crisis_date
+    - field.storage.node.field_faceter_crisis_type
+    - field.storage.node.field_faceter_has_crisis
+    - search_api.server.faceter_db_server
+id: faceter_content_index
+name: 'Faceter Content Index'
+description: 'Faceter Content Index.'
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  changed:
+    label: Changed
+    datasource_id: 'entity:node'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - node
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_faceter_crisis_date:
+    label: 'Crisis date'
+    datasource_id: 'entity:node'
+    property_path: field_faceter_crisis_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_faceter_crisis_date
+  field_faceter_crisis_type:
+    label: 'Crisis type'
+    datasource_id: 'entity:node'
+    property_path: field_faceter_crisis_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_faceter_crisis_type
+  field_faceter_has_crisis:
+    label: 'Has Crisis'
+    datasource_id: 'entity:node'
+    property_path: field_faceter_has_crisis
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_faceter_has_crisis
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - faceter_test
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: faceter_db_server

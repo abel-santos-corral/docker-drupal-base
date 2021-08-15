@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faceter_test.body
+    - field.field.node.faceter_test.field_faceter_crisis_date
+    - field.field.node.faceter_test.field_faceter_crisis_type
+    - field.field.node.faceter_test.field_faceter_has_crisis
+    - node.type.faceter_test
+  module:
+    - text
+    - user
+id: node.faceter_test.teaser
+targetEntityType: node
+bundle: faceter_test
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_faceter_crisis_date: true
+  field_faceter_crisis_type: true
+  field_faceter_has_crisis: true
+  langcode: true
+  oe_content_content_owner: true
+  oe_content_legacy_link: true
+  oe_content_navigation_title: true
+  oe_content_short_title: true
+  search_api_excerpt: true

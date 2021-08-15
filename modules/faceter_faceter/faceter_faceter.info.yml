@@ -1,0 +1,21 @@
+name: Faceter
+description: 'All necessary stuff to work with facets.'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - datetime
+  - features
+  - field
+  - field_permissions
+  - language
+  - link
+  - node
+  - options
+  - path
+  - search_api
+  - search_api_db
+  - text
+  - user
+  - views
+version: 8.x-1.0
+package: Faceter
