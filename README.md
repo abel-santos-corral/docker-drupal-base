@@ -42,6 +42,12 @@ docker-compose exec web composer install
 docker-compose exec web ./vendor/bin/run drupal:site-install
 ```
 
+To downgrade the version of Drupal use:
+
+```bash
+docker-compose exec web composer update --prefer-lowest --prefer-stable --ansi --no-suggest --no-progress
+```
+
 Using default configuration, the development site files should be available in the `web` directory and the development site
 should be available at: [http://127.0.0.1:8080/web](http://127.0.0.1:8080/web).
 
