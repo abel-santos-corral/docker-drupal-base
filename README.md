@@ -10,6 +10,7 @@ Template to install via docker a full configured drupal installation for develop
   - [Admin user](#admin_user)
 - [Functionality](#functionality)
   - [Faceter Functionality](#faceter_functionality)
+  - [Bitly Links Functionality](#bitly_links_functionality)
 - [Add new Functionality](#add_new_functionality)
 
 ## Requirements
@@ -87,6 +88,36 @@ This will:
 * Index via drush the content.
 
 Once all that installation and configuration tasks are finished the developer will have a path at `/faceter` in which the view will show the indexed elements for Test content type. From here he can create as many facets as needed.
+
+### Bitly Links Functionality
+
+This functionality allows to work with the following module:
+
+* [Bitly Links](https://www.drupal.org/project/bitly_links)
+
+Uncomment all the lines at `runner.yml.dist` file after line:
+```
+# Bitly links functionality.
+```
+
+This will:
+
+* Activate modules:
+
+  * bitly_links
+
+* Requirement:
+
+  * Developer should have created a testing bitly account and set all at [Bitly App page](https://app.bitly.com/).
+
+* Apply configuration at `bitly_links` module:
+
+  * Go to main tab.
+  * Set the content types that will generate short bitly url.
+  * Click the checkbox to let bitly be created upon node creation.
+  * Go to second tab.
+  * Configure client ID and Secret, taken and configured at Bitly App.
+  * Set the return address used by the Bitly App.
 
 ## Add new Functionality
 
