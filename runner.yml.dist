@@ -48,6 +48,8 @@ drupal:
     # - "./vendor/bin/drush genc 50 0 --bundles=faceter_test --languages='en' --kill"
     # - "./vendor/bin/drush search-api-clear faceter_content_index"
     # - "./vendor/bin/drush search-api-index faceter_content_index"
+    # Bitly links functionality.
+    # - "./vendor/bin/drush en bitly_links -y"
     # Drush clear cache after installing all modules.
     - "./vendor/bin/drush cr"
   settings:

@@ -27,7 +27,8 @@
         "drupal/typed_link": "^2.0",
         "drupal/search_api": "^1.19",
         "drupal/facets": "^1.8",
-        "drupal/facets_form": "1.x-dev"
+        "drupal/facets_form": "1.x-dev",
+        "drupal/bitly_links": "^1.0"
     },
     "require-dev": {
         "drupal/drupal-extension": "~4.0",
