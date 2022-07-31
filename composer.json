@@ -7,32 +7,35 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.3",
-        "drupal/core": "^8.9 || ^9",
         "cweagans/composer-patches": "^1.0",
-        "drupal/core-composer-scaffold": "^8.9 || ^9",
-        "drush/drush": "~10.3",
-        "webflo/drupal-finder": "^1.0",
-        "webmozart/path-util": "^2.3",
-        "drupal/easy_breadcrumb": "^2.0",
-        "drupal/features": "^3.12",
-        "drupal/field_permissions": "^1.1",
-        "drupal/redirect": "^1.6",
-        "drupal/devel":"^4.1",
         "drupal/admin_toolbar": "^3.0",
+        "drupal/bitly_links": "^1.0",
+        "drupal/core": "8.9",
+        "drupal/core-composer-scaffold": "^8.9",
+        "drupal/devel": "^4.1",
+        "drupal/easy_breadcrumb": "^2.0",
         "drupal/entity_browser": "^2.6",
         "drupal/entity_embed": "~1.1",
         "drupal/entity_reference_revisions": "~1.9",
-        "drupal/field_group": "~3.2",
-        "drupal/inline_entity_form": "~1.0-rc9",
-        "drupal/typed_link": "^2.0",
-        "drupal/search_api": "^1.19",
         "drupal/facets": "^1.8",
         "drupal/facets_form": "1.x-dev",
-        "drupal/bitly_links": "^1.0"
+        "drupal/features": "^3.12",
+        "drupal/field_group": "~3.2",
+        "drupal/field_permissions": "^1.1",
+        "drupal/inline_entity_form": "~1.0-rc9",
+        "drupal/purge_users": "^3.0",
+        "drupal/redirect": "^1.6",
+        "drupal/search_api": "^1.19",
+        "drupal/typed_link": "^2.0",
+        "drupal/webform": "^6.0",
+        "drupal/webform_sugarcrm": "^2.1",
+        "drush/drush": "~10.3",
+        "webflo/drupal-finder": "^1.0",
+        "webmozart/path-util": "^2.3"
     },
     "require-dev": {
         "drupal/drupal-extension": "~4.0",
-        "drupal/core-dev": "^8.9 || ^9",
+        "drupal/core-dev": "^8.9",
         "composer/installers": "~1.5",
         "drupal/config_devel": "~1.2",
         "guzzlehttp/guzzle": "~6.3",
@@ -82,6 +85,11 @@
         "drupal/drupal": "*"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "cweagans/composer-patches": true
+        }
     }
 }
