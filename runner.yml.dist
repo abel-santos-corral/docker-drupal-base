@@ -97,4 +97,7 @@ commands:
   sparql:reset:
     - { task: "run", command: "sparql:purge" }
     - { task: "run", command: "sparql:import" }
+  drupal:symlinker:
+    - { task: "symlink", from: "../../lib/modules", to: "${drupal.root}/modules/custom" }
+
 
